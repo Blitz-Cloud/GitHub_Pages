@@ -1,0 +1,8 @@
+:root {
+  --bg: lightblue;
+}
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+}
