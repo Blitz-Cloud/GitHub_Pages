@@ -1,8 +1,28 @@
 :root {
   --bg: lightblue;
 }
+html {
+  height: 100%;
+}
 body {
   background-color: var(--bg);
-  display: flex;
-  justify-content: center;
+  height: 100%;
+  margin: 0px;
+}
+nav {
+  background-color: lightgoldenrodyellow;
+  padding: 1rem;
+}
+nav > ul {
+  list-style: none;
+  margin: 0px;
+}
+nav > ul > li {
+  display: inline-flex;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: 0.9rem;
 }
