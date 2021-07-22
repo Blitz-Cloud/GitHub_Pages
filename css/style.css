@@ -1,5 +1,10 @@
 :root {
   --bg: lightblue;
+  --bg--hd: lightcoral;
+  --bg--ft: lightcoral;
+  --bg--lfbar: lightgoldenrodyellow;
+  --bg--main: blue;
+  --bg--rtbar: red;
 }
 html {
   height: 100%;
@@ -9,20 +14,50 @@ body {
   height: 100%;
   margin: 0px;
 }
+header {
+  background-color: var(--bg--hd);
+}
 nav {
-  background-color: lightgoldenrodyellow;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 nav > ul {
   list-style: none;
   margin: 0px;
 }
 nav > ul > li {
-  display: inline-flex;
+  display: inline;
 }
 nav > ul > li > a {
   text-decoration: none;
   color: black;
   padding: 10px;
   font-size: 0.9rem;
+}
+main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-auto-rows: minmax(100vh, auto);
+  grid-gap: 10px;
+  grid-template-areas: "left main right";
+  text-align: center;
+}
+.lfbar {
+  grid-area: left;
+  background-color: var(--bg--lfbar);
+}
+.main {
+  grid-area: main;
+  background-color: var(--bg--main);
+}
+.rtbar {
+  grid-area: right;
+  background-color: var(--bg--rtbar);
+}
+footer {
+  margin-top: auto;
+  height: 100px;
+  background-color: var(--bg--ft);
 }
