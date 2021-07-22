@@ -47,6 +47,8 @@ main {
 .lfbar {
   grid-area: left;
   background-color: var(--bg--lfbar);
+  text-align: left;
+  padding: 10px;
 }
 .main {
   grid-area: main;
@@ -60,4 +62,18 @@ footer {
   margin-top: auto;
   height: 100px;
   background-color: var(--bg--ft);
+}
+@media screen and (max-width: 600px) {
+  body,
+  header {
+    font-size: 2rem;
+  }
+  main {
+    grid-template-areas: "left main";
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .rtbar {
+    display: none;
+  }
 }
