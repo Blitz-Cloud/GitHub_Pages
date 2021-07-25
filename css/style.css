@@ -41,7 +41,7 @@ nav li {
 nav a {
   text-decoration: none;
   color: #333;
-  background: naLightSkyBluevy;
+  background-color: LightSkyBlue;
 }
 nav a:hover {
   border: 1px navy solid;
