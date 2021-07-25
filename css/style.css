@@ -1,82 +1,79 @@
 :root {
-  --bg: lightblue;
-  --bg--hd: lightcoral;
-  --bg--ft: lightcoral;
-  --bg--lfbar: lightgoldenrodyellow;
-  --bg--main: lightsalmon;
-  --bg--rtbar: red;
+  --bg--head: PowderBlue;
+  --bg--nav: LightCyan;
+  --bg--main: Beige;
+  --bg--footer: #333;
 }
 html {
   height: 100%;
 }
 body {
-  background-color: var(--bg);
   height: 100%;
   margin: 0px;
-}
-header {
-  background-color: var(--bg--hd);
-  position: sticky;
-  top: 0px;
-}
-nav {
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-nav > ul {
-  list-style: none;
-  margin: 0px;
-}
-nav > ul > li {
-  display: inline;
-}
-nav > ul > li > a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  font-size: 0.9rem;
-}
-main {
-  padding: 10px;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-  grid-auto-rows: minmax(100vh, auto);
-  grid-gap: 10px;
-  grid-template-areas: "left main right";
+  grid-template-areas:
+    "head head"
+    "nav main"
+    "foot foot";
+  grid-template-rows: minmax(100px, auto) 1fr minmax(100px, auto);
+  grid-template-columns: 150px 1fr;
+}
+
+header {
+  grid-area: head;
+  background: var(--bg--head);
   text-align: center;
 }
-.lfbar {
-  grid-area: left;
-  background-color: var(--bg--lfbar);
-  text-align: left;
+nav {
+  grid-area: nav;
+  background-color: var(--bg--nav);
   padding: 10px;
 }
-.main {
+nav h3 {
+  margin: 0px;
+}
+nav ul {
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  background: naLightSkyBluevy;
+}
+nav a:hover {
+  border: 1px navy solid;
+}
+main {
   grid-area: main;
+  text-align: center;
   background-color: var(--bg--main);
 }
-.rtbar {
-  grid-area: right;
-  background-color: var(--bg--rtbar);
-}
 footer {
-  margin-top: auto;
-  height: 100px;
-  background-color: var(--bg--ft);
+  grid-area: foot;
+  background-color: var(--bg--footer);
+  text-align: center;
+  color: #fff;
 }
-@media screen and (max-width: 600px) {
-  body,
-  header {
-    font-size: 2rem;
-  }
-  main {
-    grid-template-areas: "left " "main";
-    grid-template-rows: 0.25fr 1fr;
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-areas:
+      "head"
+      "nav"
+      "main"
+      "foot";
     grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
   }
-
-  .rtbar {
+  nav h3 {
     display: none;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
   }
 }
