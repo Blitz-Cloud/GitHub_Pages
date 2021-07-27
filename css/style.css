@@ -71,6 +71,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content 1fr min-content;
   }
+  nav{position:sticky;} 
   nav h3 {
     display: none;
   }
