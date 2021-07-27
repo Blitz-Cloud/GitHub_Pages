@@ -3,6 +3,10 @@
   --bg--nav: LightCyan;
   --bg--main: Beige;
   --bg--footer: #333;
+  --dk--head: #333;
+  --dk--nav: #333;
+  --dk--main: #333;
+  --dk--footer: #333;
 }
 html {
   height: 100%;
@@ -75,5 +79,22 @@ footer {
     padding: 0px;
     display: flex;
     justify-content: space-between;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #fff;
+    }
+    header {
+      background-color: var(--dk--head);
+    }
+    nav {
+      background-color: var(--dk--nav);
+    }
+    main {
+      background-color: var(--dk--main);
+    }
+    footer {
+      background: var(--dk--footer);
+    }
   }
 }
