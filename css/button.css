@@ -1,0 +1,27 @@
+:root {
+  --bg: #051923;
+  --button: #ffd97d;
+  --buttonH: #f4a259;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  background-color: var(--bg);
+  color: var(--button);
+  border: 2px solid;
+  padding: 1em 2.5em;
+}
+button:hover,
+button:focus {
+  box-shadow: 0em 0.5em 0.5em 0.05em var(--buttonH);
+  color: var(--buttonH);
+  border-color: var(--buttonH);
+  transform: translateY(-0.5em);
+  cursor: progress;
+}
