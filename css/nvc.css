@@ -6,5 +6,13 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: center;
+  flex-direction: column;
+}
+div {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
