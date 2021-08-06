@@ -17,8 +17,7 @@ button {
   border: 2px solid;
   padding: 1em 2.5em;
 }
-button:hover,
-button:focus {
+button:hover {
   box-shadow: 0em 0.5em 0.5em 0.05em var(--buttonH);
   color: var(--buttonH);
   border-color: var(--buttonH);
