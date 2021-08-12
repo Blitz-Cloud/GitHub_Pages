@@ -254,4 +254,9 @@ footer {
     max-height: 200px;
     max-width: 200px;
   }
+  .post-title,.post-ds{
+    border: none;
+
+  }
+
 }
