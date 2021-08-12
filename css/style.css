@@ -1,107 +1,257 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* here is my css */
 :root {
-  --bg--head: PowderBlue;
+  /* --bg--head: PowderBlue;
   --bg--nav: LightCyan;
   --bg--main: Beige;
   --bg--footer: #333;
   --dk--head: #333;
   --dk--nav: #333;
   --dk--main: #333;
-  --dk--footer: #333;
+  --dk--footer: #333; */
+  --bg-img: url(/GitHub_Pages/img/ryan-clark-Hl1FQm90z9U-unsplash.jpg);
 }
 html {
   height: 100%;
-}
-a {
-  text-decoration: none;
-  color: black;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
 }
 body {
-  height: 100%;
-  margin: 0px;
+  background-image: var(--bg-img);
+  background-color: #0d0e10;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
   display: grid;
   grid-template-areas:
-    "head head"
-    "nav main"
-    "foot foot";
-  grid-template-rows: minmax(100px, auto) 1fr minmax(100px, auto);
-  grid-template-columns: 150px 1fr;
-}
-
-header {
-  grid-area: head;
-  background: var(--bg--head);
-  text-align: center;
+    "nav"
+    "head"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    minmax(50px, auto) minmax(100px, auto)
+    1fr minmax(100px, auto);
+  backdrop-filter: blur(2px);
 }
 nav {
   grid-area: nav;
-  background-color: var(--bg--nav);
-  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-nav h3 {
-  margin: 0px;
+nav img {
+  /* width: 80px;
+  height: 40px; */
 }
-
-nav li {
-  list-style: none;
-  display: inline-block;
+nav div {
+  display: flex;
+  justify-content: space-evenly;
 }
-nav a {
-  text-decoration: none;
-  color: #333;
-  background-color: LightSkyBlue;
-}
-nav a:hover {
-  border: 1px navy solid;
+header {
+  grid-area: head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: #ece8ef; */
 }
 main {
-  padding: 10px;
+  margin: 10px;
   grid-area: main;
-
-  background-color: var(--bg--main);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 footer {
-  grid-area: foot;
-  background-color: var(--bg--footer);
-  text-align: center;
-  color: #fff;
+  grid-area: footer;
 }
-@media only screen and (max-width: 600px) {
-  body {
-    grid-template-areas:
-      "head"
-      "nav"
-      "main"
-      "foot";
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content 1fr min-content;
+.post img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+}
+/* post css */
+.post {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10px;
+  max-height: 300px;
+  max-width: 350px;
+  text-align: center;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.post-bt {
+  /* display: inline-block; */
+  border: 1px solid inherit;
+  padding: 5px 20px;
+  /* letter-spacing: 1.5; */
+  border-radius: 10px;
+  width: max-content;
+  background-color: #544d4c;
+}
+.post-title {
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: #837e7e;
+}
+.post-ds {
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: #837e7e;
+}
+/* media queries */
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+    align-items: center;
   }
-  nav {
-    position: sticky;
+  .post img {
+    width: 200px;
+    height: auto;
   }
-  nav h3 {
-    display: none;
-  }
-  nav ul {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-  }
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: #fff;
-    }
-    header {
-      background-color: var(--dk--head);
-    }
-    nav {
-      background-color: var(--dk--nav);
-    }
-    main {
-      background-color: var(--dk--main);
-    }
-    footer {
-      background: var(--dk--footer);
-    }
+  .post {
+    max-height: 200px;
+    max-width: 200px;
   }
 }
