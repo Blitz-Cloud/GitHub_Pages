@@ -1,0 +1,51 @@
+:root {
+  --font: "Nunito", sans-serif;
+  --bg: #f5d9d5;
+  --brand-cl: #ea1c2c;
+  --des-cl: #f498b8;
+  --nav-sc: rgb(222, 192, 222);
+}
+body {
+  background-color: var(--bg);
+  font-family: var(--font);
+}
+section {
+  margin-bottom: 100px;
+}
+.des h2 {
+  color: var(--brand-cl);
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.des p {
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: var(--des-cl);
+  line-height: 2;
+}
+#mainNavbar {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#mainNavbar .navbar-brand {
+  color: var(--brand-cl);
+}
+#mainNavbar .nav-link {
+  color: white;
+}
+#mainNavbar .nav-link:hover {
+  color: var(--brand-cl);
+}
+#headingGroup h2 {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 4rem;
+}
+#headingGroup span {
+  color: var(--brand-cl);
+}
+#mainNavbar.sc {
+  background-color: var(--nav-sc);
+  transition: background 500ms;
+}
