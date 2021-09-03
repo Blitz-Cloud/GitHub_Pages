@@ -1,262 +1,80 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-decoration: none;
-  color: inherit;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* here is my css */
 :root {
-  /* --bg--head: PowderBlue;
-  --bg--nav: LightCyan;
-  --bg--main: Beige;
-  --bg--footer: #333;
-  --dk--head: #333;
-  --dk--nav: #333;
-  --dk--main: #333;
-  --dk--footer: #333; */
-  --bg-img: url(/GitHub_Pages/img/ryan-clark-Hl1FQm90z9U-unsplash.jpg);
-}
-html {
-  height: 100%;
-  font-family: "Noto Sans JP", sans-serif;
-  color: white;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  --sc-track: white;
+  --sc-th: lightgray;
+  --p: #48bfe3;
+  --s: ;
 }
 body {
-  background-image: var(--bg-img);
-  background-color: #0d0e10;
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  overflow-x: hidden;
+  color: white;
   display: grid;
   grid-template-areas:
     "nav"
-    "head"
+    "header"
     "main"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows:
-    minmax(50px, auto) minmax(100px, auto)
-    1fr minmax(100px, auto);
-  backdrop-filter: blur(2px);
+  grid-template-rows: 2.5rem 100vh;
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--sc-track);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--sc-th);
+  border-radius: 20px;
 }
 nav {
+  position: sticky;
+  top: 0px;
+  width: 100vw;
+  /* text-transform: uppercase; */
   grid-area: nav;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 15px;
-  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
-nav img {
-  /* width: 80px;
-  height: 40px; */
-}
-nav div {
-  display: flex;
-  justify-content: space-evenly;
-}
-header {
-  grid-area: head;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-  background-color: rgba(0, 0, 0, 0.6);
-  /* background-color: #ece8ef; */
-}
-main {
-  margin: 10px;
-  grid-area: main;
+.navbar {
+  background-color: var(--p);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
-footer {
-  grid-area: footer;
-}
-.post img {
-  width: 250px;
-  height: auto;
-  border-radius: 15px;
-}
-/* post css */
-.post {
-  background-color: rgba(0, 0, 0, 0.2);
-
-  border-radius: 30px;
-  padding: 20px;
-  margin: 10px;
-  max-height: 300px;
-  max-width: 350px;
-  text-align: center;
-  line-height: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
   align-items: center;
 }
-.post-bt {
-  /* display: inline-block; */
-  border: 1px solid inherit;
-  padding: 5px 20px;
-  /* letter-spacing: 1.5; */
-  border-radius: 10px;
-  width: max-content;
-  background-color: #544d4c;
-}
-.post-title {
-  border-bottom: 1px;
-  border-style: solid;
-  border-color: #837e7e;
-}
-.post-ds {
-  border-bottom: 1px;
-  border-style: solid;
-  border-color: #837e7e;
-}
-/* media queries */
 
-@media (max-width: 600px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .post img {
-    width: 200px;
-    height: auto;
-  }
-  .post {
-    max-height: 200px;
-    max-width: 200px;
-  }
-  .post-title,.post-ds{
-    border: none;
+.git {
+  width: 25vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
 
-  }
+.logo {
+  margin-left: 1rem;
+  width: 25vw;
+  display: inline-flex flex;
+  justify-content: flex-start;
+}
 
+.navbar-nav {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--p);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
 }
