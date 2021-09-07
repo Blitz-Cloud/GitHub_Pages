@@ -13,6 +13,10 @@ img {
 body {
   color: white;
   background-color: var(--s);
+  display: flex;
+  flex-direction: column;
+}
+body > div {
   display: grid;
   grid-template-areas:
     "nav"
@@ -218,4 +222,8 @@ main {
   .container-img img {
     width: auto;
   }
+}
+.sc {
+  background-color: #caf0f8;
+  color: black;
 }
