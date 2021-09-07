@@ -121,16 +121,12 @@ main {
   padding: 10px;
   margin: 1rem;
 }
-.container-content a:hover,
-.container-content a:focus {
-  background-color: var(--p);
-  color: white;
-  transition: all 500ms ease;
-}
+
 /* animation */
 #anime {
   position: relative;
   width: max-content;
+  margin: 0 10px;
 }
 #anime::before,
 #anime::after {
@@ -177,6 +173,12 @@ main {
   .project {
     margin: 2rem;
   }
+  .container-content a:hover,
+  .container-content a:focus {
+    background-color: var(--p);
+    color: white;
+    transition: all 10ms ease;
+  }
 }
 @media (min-width: 320px) {
   .git {
@@ -204,6 +206,12 @@ main {
   .container-img img {
     display: inline;
     width: 350px;
+  }
+  .container-content a:hover,
+  .container-content a:focus {
+    background-color: var(--p);
+    color: white;
+    transition: all 500ms ease;
   }
 }
 @media (min-width: 1150px) {
