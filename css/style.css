@@ -4,6 +4,7 @@
   --sc-th: lightgray;
   --p: #48bfe3;
   --s: #f4f4f4;
+  font-size: 16px;
 }
 img {
   display: block;
@@ -13,21 +14,11 @@ img {
 body {
   color: white;
   background-color: var(--s);
-  display: flex;
-  flex-direction: column;
 }
-body > div {
-  display: grid;
-  grid-template-areas:
-    "nav"
-    "header"
-    "main"
-    "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: 2.5rem 100vh;
-}
+
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0px;
+  display: none;
 }
 body::-webkit-scrollbar-track {
   background-color: var(--sc-track);
@@ -44,13 +35,11 @@ body::-webkit-scrollbar-thumb {
 .navbar {
   position: sticky;
   top: 0px;
-  grid-area: nav;
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 2px;
   background-color: var(--p);
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -58,6 +47,7 @@ body::-webkit-scrollbar-thumb {
   flex: 0.5;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-right: 1rem;
 }
 
@@ -65,6 +55,7 @@ body::-webkit-scrollbar-thumb {
   margin-left: 1rem;
   flex: 1;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
 }
 
@@ -79,21 +70,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-  grid-area: header;
   background-color: var(--p);
   text-align: center;
+  height: 100vh;
+  margin: 0px;
   display: flex;
+  flex-direction: column;
+  font-size: 3rem;
 }
 header div {
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
 }
 main {
-  grid-area: main;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .project {
   color: black;
   border: 4px solid var(--p);
@@ -109,7 +106,7 @@ main {
 .project-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0px 20px;
 }
 .container-content {
@@ -131,6 +128,7 @@ main {
   position: relative;
   width: max-content;
   margin: 0 10px;
+  display: inline-block;
 }
 #anime::before,
 #anime::after {
@@ -162,20 +160,17 @@ main {
   }
 }
 @media (min-width: 0px) {
+  :root {
+    font-size: 10px;
+  }
   .bc,
   .git,
   .container-img img,
   .container-content p {
     display: none;
   }
-  .navbar {
-    font-size: 1rem;
-  }
-  header {
-    flex-direction: column;
-  }
-  .project {
-    margin: 2rem;
+  .logo {
+    width: 150px;
   }
   .container-content a:hover,
   .container-content a:focus {
@@ -192,7 +187,7 @@ main {
     display: inline;
   }
 }
-@media (min-width: 450px) {
+@media (min-width: 480px) {
   :root {
     font-size: 12px;
   }
@@ -206,6 +201,9 @@ main {
   }
   header {
     flex-direction: row;
+  }
+  .logo {
+    width: 200px;
   }
   .container-img img {
     display: inline;
@@ -221,6 +219,9 @@ main {
 @media (min-width: 1150px) {
   .container-img img {
     width: auto;
+  }
+  .logo {
+    width: 250px;
   }
 }
 .sc {
