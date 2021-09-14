@@ -130,3 +130,14 @@ html {
 body {
   height: 100%;
 }
+body::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--sc-track);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--sc-th);
+  border-radius: 20px;
+}
