@@ -115,10 +115,10 @@ main {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0));
   transform: translateY(90px);
   transition: all 300ms ease-in;
+  border-radius: 10px;
 }
 .project:hover .project-container {
   transform: translateY(0px);
-  border-radius: 10px;
 }
 .project-container h3 {
   text-transform: capitalize;
@@ -144,8 +144,7 @@ footer {
   margin-top: auto;
   min-height: 10vh;
 }
-.t-90 {
-}
+
 @media (min-width: 0px) {
   :root {
     font-size: 10px;
