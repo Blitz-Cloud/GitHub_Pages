@@ -5,6 +5,14 @@
   font-size: 16px;
   font-family: "Source Code Pro", monospace;
 }
+html {
+  height: 100%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .isDesable {
   color: lightgray;
   text-decoration: line-through;
@@ -13,6 +21,7 @@
 .navbar {
   color: var(--s);
   position: sticky;
+  z-index: 1;
   top: 0px;
   font-size: 1rem;
   font-weight: bold;
@@ -56,10 +65,10 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+  padding: 1rem;
 }
 main {
   padding: 20px;
-
   border-left-color: var(--p);
   border-left-width: 10px;
   border-left-style: solid;
@@ -72,17 +81,107 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
-  background-color: var(--S);
+  background-color: #c8e7ff;
 }
 .project {
-  background-image: url(/GitHub_Pages/img/price_table.jpg);
-  width: 250px;
+  width: 200px;
   height: 300px;
-  border-radius: 10px;
-  background-color: var(--s);
+  /* background-image: url(/GitHub_Pages/img/price.png); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-origin: border-box;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+.project img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: white;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0));
+  transform: translateY(90px);
+  transition: all 300ms ease-in;
+}
+.project:hover .project-container {
+  transform: translateY(0px);
+  border-radius: 10px;
+}
+.project-container h3 {
+  text-transform: capitalize;
+  margin: 10px;
+  font-size: 1rem;
+}
+.project-container p {
+  margin: 0px 10px;
+  font-size: 0.9rem;
+}
+
+.project-container a {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid var(--p);
+  border-radius: 10px;
+  background-color: var(--p);
+  font-size: 1rem;
+}
+footer {
+  background-color: #343a40;
+  margin-top: auto;
+  min-height: 10vh;
+}
+.t-90 {
+}
+@media (min-width: 0px) {
+  :root {
+    font-size: 10px;
+  }
+  .bc,
+  .git {
+    display: none;
+  }
+  .project-container {
+    transform: translateY(0px);
+  }
+}
+@media (min-width: 320px) {
+  .git {
+    display: flex;
+  }
+}
+@media (min-width: 480px) {
+  :root {
+    font-size: 12px;
+  }
+  .bc {
+    display: flex;
+  }
+}
+@media (min-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+  header {
+    flex-direction: row;
+  }
+  .logo {
+    width: 200px;
+  }
+  .project-container {
+    transform: translateY(70px);
+  }
 }
