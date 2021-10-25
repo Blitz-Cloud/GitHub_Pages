@@ -141,3 +141,10 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--sc-th);
   border-radius: 20px;
 }
+:root {
+  font-family: "Source Code Pro", monospace;
+  --p: #48bfe3;
+  --s: #f4f4f4;
+  --logo: #03045e;
+  font-size: 16px;
+}
