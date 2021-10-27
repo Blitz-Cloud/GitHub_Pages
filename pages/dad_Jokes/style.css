@@ -6,6 +6,8 @@ body {
   font-family: "Source Code Pro", monospace;
   display: flex;
   background: lightyellow;
+  padding: 10px;
+  transition: all ease-in;
 }
 main {
   margin: auto;
@@ -49,6 +51,7 @@ button {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  padding-right: 10px;
 }
 .src a {
   color: var(--p);
