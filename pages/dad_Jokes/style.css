@@ -1,58 +1,22 @@
-html {
-  height: 100vh;
-  position: relative;
-}
 body {
   font-family: "Source Code Pro", monospace;
-  display: flex;
-  background: lightyellow;
-  padding: 10px;
-  transition: all ease-in;
+  height: 100vh;
 }
 main {
-  margin: auto;
-  padding: 1rem;
-  border-radius: 10px;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  /* box-shadow: 11px 11px 21px #d9d9d9, -11px -11px 21px #ffffff; */
-}
-div {
-  display: flex;
-  justify-content: space-between;
-}
-p {
-  margin-top: 2rem;
-}
-.s {
-  margin-top: 10px;
-}
-button {
-  outline: 3px solid var(--p);
-  border: none;
-  background-color: white;
-  color: var(--p);
-  font-size: 0.9rem;
-  cursor: pointer;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #ffffff;
 }
 @media (min-width: 0px) {
-  .f {
+  .p {
     display: none;
   }
 }
 @media (min-width: 500px) {
-  .f {
+  .p {
     display: inline-block;
   }
   .s {
     display: none;
   }
-}
-.src {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  padding-right: 10px;
-}
-.src a {
-  color: var(--p);
 }
