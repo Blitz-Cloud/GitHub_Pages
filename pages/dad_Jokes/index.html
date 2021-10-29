@@ -27,15 +27,26 @@
     <title>Dad_Jokes</title>
   </head>
   <body class="p-2 d-flex">
-    <main class="p-4 d-flex flex-column m-auto">
+    <main class="p-4 m-auto">
       <div class="d-flex justify-content-between">
         <h5 class="">Random dad joke:</h5>
-        <button class="p btn btn-outline-primary btn-sm">New Joke</button>
+        <button id="get_JokeBtn" class="p btn btn-outline-primary btn-sm">
+          New Joke
+        </button>
       </div>
       <p class="d-block p-1"></p>
-      <button class="s btn btn-outline-primary btn-sm align-self-end">
-        New Joke
-      </button>
+      <div class="d-flex justify-content-evenly">
+        <button class="btn btn-outline-primary btn-sm" disabled>
+          Previous Joke
+        </button>
+        <button
+          id="get_JokeBtn"
+          class="s btn btn-outline-primary btn-sm align-self-end"
+        >
+          New Joke
+        </button>
+        <button id="share" class="btn btn-outline-primary btn-sm">Share</button>
+      </div>
     </main>
 
     <!-- my script  -->
