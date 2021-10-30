@@ -32,6 +32,7 @@ body {
 
 .navbar {
   position: sticky;
+  position: -webkit-sticky;
   top: 0px;
   font-size: 1rem;
   font-weight: bold;
