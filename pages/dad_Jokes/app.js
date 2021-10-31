@@ -2,6 +2,7 @@ const p = document.querySelector("p");
 const get_JokeBtn = document.querySelectorAll("#get_JokeBtn");
 const previous_Btn = document.querySelector("#previous_Btn");
 const share = document.querySelector("#share");
+var z;
 var data;
 var ids = [];
 // Here is the header for get_Joke
@@ -13,6 +14,7 @@ const get_Joke = async function () {
   const req = await axios.get("https://icanhazdadjoke.com/", config);
   data = req.data;
   ids.push(req.data.id);
+  z = ids.length - 2;
   return data;
 };
 
@@ -36,10 +38,8 @@ share.addEventListener("click", function () {
 });
 // Here is the function that take care of getting a previous joke
 const get_C_Joke = async function () {
-  const req = await axios.get(
-    `https://icanhazdadjoke.com/j/${ids[ids.length - 2]}`,
-    config
-  );
+  const req = await axios.get(`https://icanhazdadjoke.com/j/${ids[z]}`, config);
+  z--;
   const data_c = req.data;
   console.log(data_c);
   return data_c;
